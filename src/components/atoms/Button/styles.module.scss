@@ -1,0 +1,32 @@
+@import "src/assets/scss/common";
+
+.commonButton {
+  @include fontSizes(18px, 27px);
+  font-weight: 700;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: $btnTextColor;
+  border-style: none;
+  background-color: $btnBgMainColor;
+  border-color: $btnBgMainColor;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btnHoveredBgColor;
+    border-color: $btnHoveredBgColor;
+  }
+}
+
+.clicked {
+  background-color: $btnClickedBgColor;
+  border-color: $btnClickedBgColor;
+}
+
+.round {
+  border-radius: 28px;
+}
+
+.square {
+  border-radius: 5px;
+}

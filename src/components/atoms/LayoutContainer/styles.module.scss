@@ -1,0 +1,12 @@
+@import "src/assets/scss/common";
+
+.layoutContainer {
+  padding: 0 24px;
+  margin: 0 auto;
+  overflow-x: visible;
+  transition: padding 0.3s ease-in-out;
+
+  @media (min-width: $desktop) {
+    padding: 0 165px;
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/assets/scss/common";
+
+.layoutContainer {
+  background-color: $greyBgColor;
+  padding-top: 160px;
+  padding-bottom: 80px;
+}
+
+.statisticsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    //gap: 30px;
+  }
+}
+
+hr {
+  background-color: $btnBgMainColor;
+  border: none;
+  width: 60%;
+  height: 8px;
+  transform: rotate(90deg);
+  z-index: 1;
+
+  &:last-child {
+    display: none;
+  }
+
+  @media(min-width: 900px) {
+    width: 40%;
+  }
+
+  @media(min-width: $desktop) {
+    transform: none;
+  }
+}
+
+.title {
+  @include fontSizes(28px, 48px);
+  font-weight: 700;
+  color: #34313D;
+}
+
+.description {
+  @include fontSizes(16px, 28px);
+  color: $descriptionTextColor;
+  margin: 15px auto 90px;
+
+  @media (min-width: $desktop) {
+    max-width: 540px;
+  }
+}

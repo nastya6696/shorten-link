@@ -1,0 +1,72 @@
+@import "src/assets/scss/common";
+
+.statisticItem {
+  padding: 70px 32px 0;
+  margin: 0 auto;
+  background-color: $whiteBgColor;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+
+  .title {
+    @include fontSizes(22px, 33px);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    @include fontSizes(15px, 26px);
+    font-weight: 500;
+    color: $descriptionTextColor;
+  }
+
+  .icon {
+    border-radius: 50%;
+    background-color: $svgBgColor;
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &::after {
+    width: 8px;
+    background-color: $btnBgMainColor;
+    content: "";
+    z-index: 1;
+    min-height: 80px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+  }
+
+  &:last-child::after {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: $desktop) {
+  .statisticItem {
+    min-width: 350px;
+    height: 311px;
+    text-align: left;
+
+    .icon {
+      left: 25%;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      position: absolute;
+      top: 35%;
+      left: 110%;
+    }
+  }
+}

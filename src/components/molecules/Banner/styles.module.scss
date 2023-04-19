@@ -1,0 +1,68 @@
+@import "src/assets/scss/common";
+
+.bannerLayout {
+  padding: 0;
+  background-color: $whiteBgColor;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bannerImg {
+  background-image: url("../../../assets/svg/banner.svg");
+  background-position: left;
+  min-height: 337px;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  @include fontSizes(42px, 48px);
+  font-weight: 700;
+}
+
+.description {
+  color: $descriptionTextColor;
+  @include fontSizes(18px, 30px);
+  margin: 15px auto 32px;
+}
+
+.getStartedBtn {
+  width: 197px;
+  height: 56px;
+}
+
+.bannerContent {
+  //background-color: $whiteBgColor;
+}
+
+@media(min-width: $desktop) {
+  .bannerLayout {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-left: 165px;
+  }
+
+  .bannerLayout>* {
+    flex-basis: 50%;
+  }
+
+  .bannerContent {
+    text-align: left;
+  }
+
+  .bannerImg {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .title {
+    @include fontSizes(80px, 90px);
+  }
+
+  .description {
+    @include fontSizes(22px, 36px);
+  }
+}

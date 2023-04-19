@@ -1,0 +1,35 @@
+@import "src/assets/scss/common";
+
+.boostYourLinksBlock {
+  background-image: url("../../../assets/svg/bg-boost-mobile.svg");
+  background-color: $svgBgColor;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.title {
+  @include fontSizes(28px, 48px);
+  font-weight: 700;
+  color: $white;
+}
+
+.button {
+  width: 197px;
+}
+
+@media (min-width: $desktop) {
+ .boostYourLinksBlock {
+   background-image: url("../../../assets/svg/bg-boost-desktop.svg");
+   padding: 57px 450px;
+   gap: 32px;
+ }
+
+  .title {
+    @include fontSizes(20px, 30px);
+  }
+}
